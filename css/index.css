@@ -1,0 +1,157 @@
+* {
+    color: whitesmoke;
+    font-family: "Quicksand"
+}
+
+body {
+    background-color: #18001a;
+}
+
+.navbar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: ;
+}
+
+.headshot {
+	flex-shrink: 0;
+	margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+	height: calc(150px + 6vw);
+	width: calc(150px + 6vw);
+	border: calc(8px + 0.2vw) solid transparent;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	background-size: cover;
+	box-sizing: border-box;
+	box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.headshot-2 {
+	border-radius: 50%;
+	background-image: url("/Users/kiraamani/Desktop/ctd/intro/kira-amani-io/profilepic.jpg"), linear-gradient(to bottom right, #ff3cac, #562b7c, #2b86c5);
+}
+
+.contact {
+    text-align: center;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.background-img {
+    background-image: url("https://3.bp.blogspot.com/-piZWCW2uUbg/W2fPXxkWZgI/AAAAAAAAOu0/eydmMjTIqcwLMHEEr2H7imqoRTxMw4o9QCLcBGAs/s1600/among_trees_night_dribbble.png");
+    height: 1000px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5rem;
+    padding:20px;
+    border: 1px solid #2a3cad;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px #2a3cad;
+    position: relative;
+}
+
+.content h2 { 
+    font-size:19px;
+}
+
+/*text boxes*/
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 50px rgb(23, 32, 90);
+    background: #111845a6;
+}
+
+.title {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.experience-container {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    border:1px solid #f0a591;
+    text-align: center;
+}
+
+.degree {
+    width: 200px
+}
+
+.intern {
+    width: 200px
+}
+
+.research {
+    width: 250px
+}
+
+.one {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+    background: #111845a6;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgb(23, 32, 90);
+    border:1px solid #f0a591;
+    color: white;
+    padding: 20px;
+}
+
+
+.three {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+    background: #111845a6;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgb(23, 32, 90);
+    border:1px solid #f0a591;
+    color: white;
+    padding: 20px;
+}
+
+.four {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+    background: #111845a6;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgb(23, 32, 90);
+    border:1px solid #f0a591;
+    color: white;
+    padding: 20px;
+}
+
+h2 {
+    font-size: large;
+    font-weight: bold;
+}
+
+h1 {
+    font-weight: bolder;
+    text-align: center;
+    text-size: larger;
+}
+
+
+
