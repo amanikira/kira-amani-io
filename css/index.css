@@ -1,157 +1,151 @@
-* {
-    color: whitesmoke;
-    font-family: "Quicksand"
+/* Base styles for mobile (mobile-first approach) */
+/* Styling for the headshot */
+.headshot {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; /* Make it circular */
+    background-color: #333; /* Background color as placeholder */
+    margin-top: 20px;
+    background-image: url("profilepic.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    border: 2px solid #fff; 
 }
 
 body {
-    background-color: #18001a;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111845;
+    color: white; /* All text is white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.navbar {
-    width: 5rem;
-    height: 100vh;
-    position: fixed;
-    background-color: ;
-}
-
-.headshot {
-	flex-shrink: 0;
-	margin: 20px;
-    margin-left: auto;
-    margin-right: auto;
-	height: calc(150px + 6vw);
-	width: calc(150px + 6vw);
-	border: calc(8px + 0.2vw) solid transparent;
-	background-origin: border-box;
-	background-clip: content-box, border-box;
-	background-size: cover;
-	box-sizing: border-box;
-	box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
-}
-
-.headshot-2 {
-	border-radius: 50%;
-	background-image: url("/Users/kiraamani/Desktop/ctd/intro/kira-amani-io/profilepic.jpg"), linear-gradient(to bottom right, #ff3cac, #562b7c, #2b86c5);
-}
-
-.contact {
+article#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-}
-
-.icon {
-    width: 30px;
-    height: 30px;
-}
-
-section {
     margin-bottom: 20px;
 }
 
-.background-img {
-    background-image: url("https://3.bp.blogspot.com/-piZWCW2uUbg/W2fPXxkWZgI/AAAAAAAAOu0/eydmMjTIqcwLMHEEr2H7imqoRTxMw4o9QCLcBGAs/s1600/among_trees_night_dribbble.png");
-    height: 1000px;
-    width: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 5rem;
-    padding:20px;
-    border: 1px solid #2a3cad;
-    border-radius: 4px;
-    box-shadow: 0px 0px 5px #2a3cad;
-    position: relative;
-}
-
-.content h2 { 
-    font-size:19px;
-}
-
-/*text boxes*/
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 20px 50px rgb(23, 32, 90);
-    background: #111845a6;
-}
-
-.title {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.experience-container {
-    flex-direction: row;
-    justify-content: space-between;
-    display: flex;
-    border:1px solid #f0a591;
+.navbar {
+    width: 100%;
+    background-color: #333377;
+    padding: 15px;
     text-align: center;
 }
 
-.degree {
-    width: 200px
+.navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.intern {
-    width: 200px
+.nav-item {
+    display: inline-block;
+    margin: 0 10px;
 }
 
-.research {
-    width: 250px
-}
-
-.one {
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-    height: 300px;
-    background: #111845a6;
-    box-sizing: border-box;
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgb(23, 32, 90);
-    border:1px solid #f0a591;
+.nav-link {
+    text-decoration: none;
     color: white;
-    padding: 20px;
-}
-
-
-.three {
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-    height: 300px;
-    background: #111845a6;
-    box-sizing: border-box;
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgb(23, 32, 90);
-    border:1px solid #f0a591;
-    color: white;
-    padding: 20px;
-}
-
-.four {
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-    height: 300px;
-    background: #111845a6;
-    box-sizing: border-box;
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgb(23, 32, 90);
-    border:1px solid #f0a591;
-    color: white;
-    padding: 20px;
-}
-
-h2 {
-    font-size: large;
     font-weight: bold;
 }
 
-h1 {
-    font-weight: bolder;
-    text-align: center;
-    text-size: larger;
+.icon {
+    width: 30px; /* Set all icons to the same size */
+    height: 30px;
+    margin: 0 5px;
 }
 
+.content {
+    padding: 20px;
+}
 
+section {
+    margin-bottom: 40px;
+}
 
+.background-img {
+    background-color: #111845a6;
+    padding: 20px;
+    box-shadow: 0 20px 50px rgb(23, 32, 90);
+}
+
+h1, h2 {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+
+.experience-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 20px;
+}
+
+.experience-item {
+    background-color: #333377;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    /* Headers */
+    h1 {
+        font-size: 2.5rem; /* Increase font size */
+        color: #5b9bd5; /* A different shade of blue */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Increase font size for subheadings */
+        color: #5b9bd5; /* Match color with h1 */
+    }
+
+    /* Navbar */
+    .navbar {
+        padding: 20px 10px; /* Adjust padding (top/bottom and left/right) */
+        background-color: #5b9bd5;
+    }
+
+    .navbar-nav {
+        padding: 10px 0; /* Adjust padding */
+        background-color: #5b9bd5;
+    }
+
+    /* Name at the Top */
+    article#profile h1 {
+        font-size: 2.5rem; /* Increase font size */
+        font-weight: bold; /* Change font style to bold */
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .experience-container {
+        grid-template-columns: 1fr 1fr 1fr; /* Three columns on desktop */
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .navbar {
+        padding: 25px;
+        background-color: #333377;
+    }
+}
