@@ -132,20 +132,51 @@ p {
 
 /* Desktop styles */
 @media (min-width: 1024px) {
+    /* Experience Container: 3 Columns */
     .experience-container {
-        grid-template-columns: 1fr 1fr 1fr; /* Three columns on desktop */
+        grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+        gap: 30px; /* Increase gap between items */
     }
 
-    h1 {
-        font-size: 2.5rem;
+    /* Headshot: Larger and with a box-shadow */
+    .headshot {
+        width: 150px; /* Larger headshot */
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid #5b9bd5; /* A different shade of blue for the border */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
     }
 
-    p {
-        font-size: 1.5rem;
-    }
-
+    /* Navbar: Add hover effect and adjust layout */
     .navbar {
         padding: 25px;
         background-color: #333377;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-nav {
+        padding: 0;
+        background-color: transparent; /* Transparent background */
+    }
+
+    .nav-item {
+        margin: 0 15px; /* Increase spacing between items */
+    }
+
+    .nav-link:hover {
+        color: #5b9bd5; /* Hover effect for links */
+        text-decoration: underline; /* Underline on hover */
+    }
+
+    /* Paragraph text: Increase size and spacing */
+    p {
+        font-size: 1.5rem; /* Larger text for readability */
+        line-height: 1.8; /* Increase line height for better spacing */
+    }
+
+    /* Section margin */
+    section {
+        margin-bottom: 60px; /* Increase space between sections */
     }
 }
