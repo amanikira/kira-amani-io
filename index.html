@@ -59,8 +59,33 @@
             <h2>Projects</h2>
         </section>
     </div>
+    <section>
+        <h2>Leave a Message</h2>
+        <form name="leave_message">
+            <label for="usersName">Name:</label>
+            <input type="text" id="usersName" name="usersName" required>
+            <br>
+            
+            <label for="usersEmail">Email:</label>
+            <input type="email" id="usersEmail" name="usersEmail" required>
+            <br>
+            
+            <label for="usersMessage">Message:</label>
+            <textarea id="usersMessage" name="usersMessage" required></textarea>
+            <br>
+            
+            <button type="submit">Submit</button>
+          </form>
+          
+    </section>
+    <section id ="messages" style="display:none;">
+        <h2>Messages</h2>
+            <ul>
+
+            </ul>
+    </section>
     <footer>
     </footer>
 </body>
-<script src="/Users/kiraamani/Desktop/ctd/intro/kira-amani-io/js.js/index.js" async></script>
+<script src="js/index.js" async></script>
 </html>
