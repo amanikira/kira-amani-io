@@ -121,3 +121,51 @@ document.addEventListener('DOMContentLoaded', function() {
         messageForm.reset();
     });
 });
+
+// Ensure the DOM is fully loaded before running the script
+document.addEventListener('DOMContentLoaded', function() {
+    // GitHub API URL
+    const githubUsername = 'amanikira';  // Replace with your GitHub username
+    const apiUrl = `https://api.github.com/users/${githubUsername}/repos`;
+
+    //console log
+    console.log('Fetching GitHub Repos...');
+
+    // Fetch data from the GitHub API
+    fetch(apiUrl)
+        .then(response => {
+            // Check if the response is successful
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(repositories => {
+            // Log the repositories data for debugging
+            console.log(repositories);
+
+            // DOM Selection for the Projects section
+            const projectSection = document.getElementById('projects');
+            const projectList = projectSection.querySelector('ul');
+
+            // Iterate over the repositories array
+            repositories.forEach(repo => {
+                // Create a new list item (li) element for each repository
+                const project = document.createElement('li');
+
+                // Set the inner text of the list item to the repository name
+                project.innerText = repo.name;
+
+                // Append the project element to the project list
+                projectList.appendChild(project);
+            });
+        })
+        .catch(error => {
+            // Handle any errors and log them
+            console.error('Fetch error:', error);
+
+            // Display an error message in the Projects section
+            const projectSection = document.getElementById('projects');
+            projectSection.innerHTML = `<p>Could not fetch repositories: ${error.message}</p>`;
+        });
+});
